@@ -8,7 +8,7 @@ package com.tecmilenio.evidencia1av.classes;
  *
  * @author andre
  */
-public class Imc {
+public class imc {
     
     private double peso;
     private double altura;
@@ -38,7 +38,7 @@ public class Imc {
         this.imc = imc;
     }
     
-    public Imc (String peso, String altura) {
+    public imc (String peso, String altura) {
         this.setPeso(Double.parseDouble(peso));
         this.setAltura(Double.parseDouble(altura));
     }
