@@ -1,21 +1,21 @@
 package com.tecmilenio.evidencia1av.controllers;
 
-import com.tecmilenio.evidencia1av.classes.*;
-import com.tecmilenio.evidencia1av.services.*;
+import com.tecmilenio.evidencia1av.classes.user;
+import com.tecmilenio.evidencia1av.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("crear")
+@RequestMapping("crearUser")
 public class UserController {
 
     @Autowired
     private UserService UserService;
     
     @PostMapping
-    public String saveUser(
+    public String guardarUser(
             @RequestParam("nombre") String nombre,
             @RequestParam("apellido") String apellido,
             @RequestParam("edad") String edad,
@@ -24,8 +24,8 @@ public class UserController {
 
         user user = new user(nombre, apellido, edad, usuario, pass);
 
-        UserService.save(user);
+        UserService.guardar(user);
 
-        return "index";
+        return "calculaimc";
     }
 }

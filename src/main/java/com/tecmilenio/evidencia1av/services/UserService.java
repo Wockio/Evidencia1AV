@@ -1,7 +1,7 @@
 package com.tecmilenio.evidencia1av.services;
 
-import com.tecmilenio.evidencia1av.classes.*;
-import com.tecmilenio.evidencia1av.dao.*;
+import com.tecmilenio.evidencia1av.classes.user;
+import com.tecmilenio.evidencia1av.dao.UserDAO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class UserService {
     private UserDAO UserDAO;
 
 
-    public void save(user user) {
-        UserDAO.insert(user);
+    public void guardar(user user) {
+        UserDAO.insertar(user);
     }
 }

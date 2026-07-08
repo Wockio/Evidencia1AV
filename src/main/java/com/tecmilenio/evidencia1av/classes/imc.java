@@ -37,14 +37,14 @@ public class imc {
     public void setImc(double imc) {
         this.imc = imc;
     }
-    
-    public imc (String peso, String altura) {
-        this.setPeso(Double.parseDouble(peso));
-        this.setAltura(Double.parseDouble(altura));
-    }
-    
+        
     public void calcularImc() {
         this.setImc((this.getPeso()/(this.getAltura()*this.getAltura())));
     }
     
+    public imc (String peso, String altura, double imc) {
+        this.setPeso(Double.parseDouble(peso));
+        this.setAltura(Double.parseDouble(altura));
+        this.setImc(imc);
+    }
 }
